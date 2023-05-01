@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+{% load filter %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito&family=Ysabeau&display=swap"
+          rel="stylesheet">
+<body>
+<div class="header">
+    <div class="header_logo">
+        <h1><a href="{% url 'home' %}"><span class="Red">С</span>антех<span class="Red">C</span>трой</a></h1>
+    </div>
+    <div class="header_navbar">
+        <input type="text" class="header_search" placeholder="Поиск" id="searchbar">
+    </div>
+    <div class="header_user">
+        {% if user.is_authenticated %}
+            <h1>{{ user.username }}</h1>
+        {% else %}
+            <a href="{% url 'login' %}"><h1>Войти</h1></a>
+        {% endif %}
+    </div>
+</div>
+<div class="main">
+<div class="main_card">
+    {% for item in products %}
+        <div class="card">
+            <div class="card_top">
+                <img id="card_img" src="{{ item.image.url }}" alt="">
+            </div>
+            <div class="card_down">
+                <div class="card_title">
+                    <h3>Название:{{ item.name }}</h3>
+                    <hr>
+                </div>
+                <div class="card_description">
+                    <p>Описание: <br> {{ item.description }}</p>
+                    <p id="card_price">Цена: {{ item.price }}</p>
+                </div>
+                <div class="card_btn">
+                    <button id="card_btn"><a href="{{ item.get_absolute_url }}">Посмотреть</a></button>
+                </div>
+            </div>
+        </div>
+        {% if forloop.last %}
+            </div>
+        {% elif forloop.counter|br %}
+            </div>
+            {% if forloop.counter|brr %}
+                <div class="main_card" style="border: 2px solid #4680cb; background-color: lightblue">
+            {% else %}
+                <div class="main_card">
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% block detail %}
+{% endblock %}
+</body>
+</html>

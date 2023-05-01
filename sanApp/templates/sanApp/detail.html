@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'sanApp/index.html' %}
+{% block detail %}
+    <div class="detail">
+        <div class="detail_inner">
+            <div class="detail_img">
+                <img src="{{ product.image.url }}" alt="" id="detail_img">
+            </div>
+            <div class="detail_down">
+                <div class="detail_left">
+                    <p>{{ product.name }}-</p>
+                    <p>{{ product.price }} Руб.</p>
+                </div>
+                <div class="detail_right">
+                    <button id="detail_btn"><a href="">Добавить в корзину</a></button>
+                </div>
+            </div>
+            <hr>
+             <div class="review_input">
+                    <form action="{% url 'create_comment' %}" method="POST">
+                        {% csrf_token %}
+                        <button id="review_btn" type="submit">Оставить отзыв</button>
+                        <input id="review_inp" name="comment" type="text" placeholder="Отзыв">
+                        <input id="review_inp" name="pk" type="hidden" value="{{ product.pk }}" placeholder="Отзыв">
+                    </form>
+                </div>
+        </div>
+    </div>
+    <div class="review">
+        <div class="review_inner">
+            <div class="review_header">
+                <h1 style="color: #4680cb">Отзывы</h1>
+            </div>
+            {% if reviews|length == 0 %}
+                <h1 style="color: #4680cb">Отзывов пока что нету</h1>
+            {% else %}
+                {% for item in reviews %}
+                    <div class="comment">
+                        <div class="review_info">
+                            <h3>{{ item.user.username }}:</h3>
+                            <h3>{{ item.comment }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="login_form">
+    <form action="" method="GET">
+        <div class="login_inner">
+            <div class="login_header">
+                <h1><a style="color:#4680cb;;"><span class="Red">С</span>антех<span class="Red">C</span>трой</a></h1>
+            </div>
+            <div class="login_input">
+                <div class="login_input_inner">
+                    <div class="input_first">
+                        <input type="text" placeholder="Логин" class="auth">
+                    </div>
+                    <div class="input_second">
+                        <input type="password" placeholder="Пароль" class="auth">
+                    </div>
+                </div>
+            </div>
+            <div class="login_btn">
+                <button id="login_btn">Регистрация</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

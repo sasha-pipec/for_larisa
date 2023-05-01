@@ -1,0 +1,340 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lora', serif;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    padding-top: 15px;
+    background-color: #4680cb;
+    height: 50px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+}
+
+.header_logo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.header_navbar {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.header_user {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+#searchbar {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 500px;
+    height: 30px;
+}
+
+.Red {
+    color: #ae212d;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.main {
+    padding-top: 20px;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    height: 95vh;
+}
+
+.main_card {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 550px;
+    border: 2px solid #4680cb;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
+    color: black;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card_top {
+    height: 300px;
+    background-color: white;
+}
+
+.card_down {
+    height: 250px;
+    display: block;
+    justify-content: center;
+    background-color: white;
+}
+
+.card_title {
+    height: 50px;
+}
+
+.card_description {
+    height: 150px;
+}
+
+.card_btn {
+    height: 50px;
+}
+
+#card_btn {
+    height: 50px;
+    width: 100%;
+    background-color: #4680cb;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+#card_btn:hover {
+    height: 50px;
+    width: 100%;
+    background-color: #5971cb;
+    border: none;
+    color: white;
+}
+
+#card_img {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#card_price {
+    padding-top: 70px;
+}
+
+#detail_img {
+    height: 500px;
+    width: 500px;
+    border: 1px solid #4680cb;
+    border-radius: 10px;
+}
+
+.detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.review {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.detail_inner {
+    width: 800px;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #4680cb;
+    height: 620px;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+.review_inner {
+    width: 800px;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #4680cb;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.detail_down {
+    display: inline-flex;
+    width: 500px;
+    justify-content: space-around;
+    color: #4680cb;
+}
+
+.detail_left {
+    display: inline-flex;
+}
+
+#detail_btn {
+    height: 30px;
+    width: 100%;
+    background-color: #4680cb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.comment {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.review_info {
+    display: inline-flex;
+    width: 500px;
+    background-color: lightgray;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.review_input {
+    margin-top: 20px;
+}
+
+#review_inp {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+}
+
+#review_btn {
+    height: 30px;
+    width: 120px;
+    background-color: #4680cb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.login_form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.login_inner {
+    border: 2px solid  #4680cb;
+    border-radius: 5px;
+    height: 600px;
+    width: 400px;
+}
+
+.login_header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_input {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_btn {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth{
+    width: 350px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid  #4680cb;
+}
+
+#login_btn{
+    height: 50px;
+    width: 100%;
+    background-color: #4680cb;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.input_three{
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+#register{
+    color: #4680cb;
+    font-size: 18px;
+}

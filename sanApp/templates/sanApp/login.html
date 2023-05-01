@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="login_form">
+    <form action="{% url 'user_login' %}" method="GET">
+        <div class="login_inner">
+            <div class="login_header">
+                <h1><a style="color:#4680cb;;"><span class="Red">С</span>антех<span class="Red">C</span>трой</a></h1>
+            </div>
+            <div class="login_input">
+                <div class="login_input_inner">
+                    <div class="input_first">
+                        <input type="text" placeholder="Логин" class="auth" name="login">
+                    </div>
+                    <div class="input_second">
+                        <input type="password" placeholder="Пароль" class="auth" name="password">
+                    </div>
+                    <div class="input_three">
+                        <a href="{% url 'register' %}" id="register">Регистрация</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login_btn">
+                <button id="login_btn">Войти</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% if error %}
+    <h1 style="color: red">{{ error }}</h1>
+{% endif %}
+</body>
+</html>
